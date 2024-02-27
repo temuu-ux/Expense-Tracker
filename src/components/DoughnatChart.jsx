@@ -1,5 +1,7 @@
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
+import { DonurData } from "@/pages/utils/donurData";
+import React from "react";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 export const DoughnutChart = () => {
@@ -27,46 +29,20 @@ export const DoughnutChart = () => {
           <Doughnut data={data} />
         </div>
         <div className="w-[337px] flex flex-col space-y-2">
-          <div className="flex justify-between">
-            <div className="w-[100px] flex items-center gap-2">
-              <div className=" bg-[#0166FF] rounded-full w-3 h-3"></div>
-              <div>Bills</div>
-            </div>
-            <div className="">5’000’000₮</div>
-            <div>15,50%</div>
-          </div>
-          <div className="flex justify-between">
-            <div className="flex w-[100px] items-center gap-2">
-              <div className=" bg-[#E74694] rounded-full w-3 h-3"></div>
-              <div>Food</div>
-            </div>
-            <div>5’000’000₮</div>
-            <div>15,50%</div>
-          </div>
-          <div className="flex justify-between">
-            <div className="flex w-[100px] items-center gap-2">
-              <div className=" bg-[#FDBA8C] rounded-full w-3 h-3"></div>
-              <div>Shopping</div>
-            </div>
-            <div>5’000’000₮</div>
-            <div>15,50%</div>
-          </div>
-          <div className="flex justify-between">
-            <div className="flex w-[100px] items-center gap-2">
-              <div className=" bg-[#16BDCA] rounded-full w-3 h-3"></div>
-              <div>Insurance</div>
-            </div>
-            <div>5’000’000₮</div>
-            <div>15,50%</div>
-          </div>
-          <div className="flex justify-between">
-            <div className="flex w-[100px] items-center gap-2">
-              <div className=" bg-[#F2901C] rounded-full w-3 h-3"></div>
-              <div>Clothing</div>
-            </div>
-            <div>5’000’000₮</div>
-            <div>15,50%</div>
-          </div>
+          {DonurData.map((e) => {
+            return (
+              <div>
+                <div className="flex justify-between">
+                  <div className="w-[100px] flex items-center gap-2">
+                    <div className="">{e.color}</div>
+                    <div>{e.productName}</div>
+                  </div>
+                  <div>{e.expenses}</div>
+                  <div>{e.percent}</div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

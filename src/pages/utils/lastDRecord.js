@@ -2,7 +2,7 @@ export const lastDrecord = [
   {
     homeLogo: "",
     categories: "Food & Drinks",
-    hours: "1 hours ago",
+    hours: "1 hours 'ago",
     money: "- 1,000₮",
   },
   {

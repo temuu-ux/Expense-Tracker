@@ -44,10 +44,9 @@ export const BarChart = () => {
           Income-Expense
         </p>
       </div>
-      <div className="">
-        <div className="px-6 py-8">
-          <Bar data={data} />
-        </div>
+
+      <div className="px-6 py-8 h-[229px]">
+        <Bar data={data} />
       </div>
     </div>
   );
