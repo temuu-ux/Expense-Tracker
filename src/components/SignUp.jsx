@@ -40,6 +40,7 @@ export default function SignUp({ setShowLoad }) {
                 className="input input-bordered w-full max-w-xs  text-black border-[#D1D5DB] bg-[#F3F4F6]"
               />
             </div>
+
             <button
               className="btn bg-[#0166FF] w-[325px] text-[#FFFFFF] rounded-3xl"
               onClick={() => {

@@ -15,7 +15,7 @@ export default function RightRecord() {
         </div>
         <button className="btn bg-[#F9FAFB]">Newest fisrt</button>
       </div>
-      <div>
+      <div className="flex flex-col gap-6">
         <div className="flex justify-between bg-[#FFFFFF] rounded-xl border-solid-1 border-[#E5E7EB]">
           <div className="px-6 py-2 flex justify-between items-center w-[894px]">
             <label className=" cursor-pointer items-center flex space-x-2">
@@ -25,7 +25,10 @@ export default function RightRecord() {
             <p className="text-[#94A3B8]">- 35,500₮</p>
           </div>
         </div>
-        <div></div>
+        <div>
+          <h1>Today</h1>
+          <div></div>
+        </div>
         <div></div>
       </div>
     </div>

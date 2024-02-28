@@ -1,4 +1,4 @@
-export default function Wait() {
+export default function Wait({ setShowLoad }) {
   return (
     <div className="w-screen h-screen bg-[#FFFFFF]">
       <div className="flex flex-col justify-center items-center gap-12 py-96">
@@ -12,6 +12,7 @@ export default function Wait() {
             Түр хүлээнэ үү...
           </p>
         </div>
+        <button onClick={() => setShowLoad("stepOne")}>gg</button>
       </div>
     </div>
   );

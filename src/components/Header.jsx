@@ -7,7 +7,9 @@ export default function Header() {
       <div className="flex gap-6  items-center ">
         <img src="/logo.svg" alt="" />
         <Link href={"/"}>
-          <p className="text-slate-900 btn btn-ghost">Dashboard</p>
+          <p className="text-gray-500 btn btn-ghost hover:text-slate-900">
+            Dashboard
+          </p>
         </Link>
         <Link href={"/record"}>
           <p className="text-gray-500 btn btn-ghost">Record</p>

@@ -1,7 +1,7 @@
 import Layout from "@/components/layout";
 import Link from "next/link";
 
-export default function LogIn({ setWait }) {
+export default function LogIn({ setLogIn }) {
   return (
     <div className="w-screen h-screen flex">
       <div className="w-1/2 bg-[#FFFFFF] flex justify-center items-center  pl-[422px] pr-[126px]">
@@ -31,7 +31,9 @@ export default function LogIn({ setWait }) {
             />
 
             <button
-              onClick={() => setWait("loading")}
+              // onClick={() => {
+              //   setLogIn("loading");
+              // }}
               className="btn bg-[#0166FF] w-[325px] text-[#FFFFFF] rounded-3xl"
             >
               Log in
