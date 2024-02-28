@@ -5,7 +5,7 @@ import { Type, Category } from "@/pages/utils/typeCateData";
 import { Slider } from "./Slider";
 export default function Record() {
   return (
-    <div className=" w-[282px] m-auto bg-[#FFFFFF] px-2 py-6 flex flex-col gap-8 items-start justify-start rounded-xl">
+    <div className=" w-[282px]  bg-[#FFFFFF] px-2 py-6 flex flex-col gap-8 items-start  rounded-xl">
       <div>
         <div className="w-[250px] h-[88px] flex flex-col gap-6">
           <h1 className=" text-[#000000] text-2xl font-semibold not-italic">
