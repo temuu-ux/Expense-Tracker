@@ -3,7 +3,7 @@ import { lastDrecord2, lastDrecord3 } from "@/pages/utils/lastDRecord";
 
 export default function RightRecord() {
   return (
-    <div className="w-[894px] flex flex-col  px-6 gap-6">
+    <div className="w-[894px] flex flex-col py-4  px-6 gap-6">
       <div className="flex justify-between w-[894px] pb-1">
         <div className="flex items-center ">
           <button>
