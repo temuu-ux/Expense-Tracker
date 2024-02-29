@@ -5,6 +5,40 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          primary: "#ffffff",
+
+          secondary: "#ff00ff",
+
+          accent: "#00ffff",
+
+          neutral: "#ff00ff",
+
+          "base-100": "#F3F4F6",
+
+          info: "#0000ff",
+
+          success: "#00ff00",
+
+          warning: "#00ff00",
+
+          error: "#ff0000",
+        },
+      },
+    ],
+  },
+  theme: {
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+    },
+  },
   theme: {
     extend: {
       backgroundImage: {
@@ -15,5 +49,4 @@ module.exports = {
     },
   },
   plugins: [require("daisyui")],
-  daisyui: { themes: ["light"] },
 };

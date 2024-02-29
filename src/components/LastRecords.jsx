@@ -17,9 +17,7 @@ export default function LastRecord() {
         {lastDrecord.map((e) => (
           <div className="flex  border-b border-[#E2E8F0] justify-between py-5">
             <div className="flex  text-center items-center space-x-4">
-              <div className="bg-[#0166FF] w-10 h-10 rounded-full flex justify-center items-center">
-                <GrHomeRounded className="text-white  " />
-              </div>
+             {e.homeLogo}
 
               <div className="flex flex-col text-start">
                 <p className="text-[#000000] font-normal text-base not-italic">
