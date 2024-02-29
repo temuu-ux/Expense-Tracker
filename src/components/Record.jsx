@@ -2,8 +2,7 @@ import { BsPlusLg } from "react-icons/bs";
 import { HiMiniEye } from "react-icons/hi2";
 import { IoMdArrowDropright } from "react-icons/io";
 import { Type, Category } from "@/pages/utils/typeCateData";
-import { Input } from "./Input";
-import { Option, Option2, Option3 } from "./Option";
+import Modal from "./Modal";
 import { Slider } from "./Slider";
 export default function Record() {
   return (
@@ -20,56 +19,7 @@ export default function Record() {
           >
             <BsPlusLg /> Add
           </button>
-          <dialog id="my_modal_3" className="modal">
-            <div className="modal-box">
-              <form method="dialog">
-                <button className="btn btn-sm btn-circle btn-ghost text-[#0F172A] w-6 h-6 absolute right-2 top-2">
-                  ✕
-                </button>
-              </form>
-              <h3 className="font-semibold not-italic text-xl">Add Record</h3>
-              <div className="border-t border-[#E2E8F0] flex">
-                <div className="py-5 px-6">
-                  <div className="flex gap-2 ">
-                    <button className="btn">Normal</button>
-                    <button className="btn">Normal</button>
-                  </div>
-                  <div>
-                    <Input />
-
-                    <div>
-                      <p>Category</p>
-                      <Option />
-                    </div>
-                    <div className="flex">
-                      <div>
-                        <p>Date</p>
-                        <Option2 />
-                      </div>
-                      <div>
-                        <p>Date</p>
-                        <Option3 />
-                      </div>
-                    </div>
-                    <button className="btn btn-block">block</button>
-                  </div>
-                </div>
-                <div className="py-5 px-6">
-                  <div>
-                    <p>Payee</p>
-                    <Option />
-                  </div>
-                  <div>
-                    <p>Note</p>
-                    <textarea
-                      placeholder="Bio"
-                      className="textarea textarea-bordered textarea-lg w-full max-w-xs"
-                    ></textarea>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </dialog>
+          <Modal />
         </div>
       </div>
       <div className="bg-gray-100 w-[250px] h-8 p-4 rounded-lg border border-gray-300 justify-start items-center inline-flex">
