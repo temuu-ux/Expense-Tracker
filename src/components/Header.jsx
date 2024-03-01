@@ -1,18 +1,36 @@
 import { BsPlusLg } from "react-icons/bs";
 import Link from "next/link";
+import React, { useState } from "react";
 
 export default function Header() {
+  const [dash, setDash] = useState("Dashboard");
   return (
     <div className="w-[1440px] flex justify-between  m-auto  space-y-1 py-1  px-32">
       <div className="flex gap-6  items-center ">
         <img src="/logo.svg" alt="" />
         <Link href={"/"}>
-          <p className="text-gray-500 btn btn-ghost hover:text-slate-900">
+          <button
+            className={` btn bg-[white] shadow-none border-0 ${
+              dash == "Dashboard" ? "text-slate-900" : "text-gray-500"
+            }`}
+            onClick={() => {
+              setDash("Dashboard");
+            }}
+          >
             Dashboard
-          </p>
+          </button>
         </Link>
         <Link href={"/record"}>
-          <p className="text-gray-500 btn btn-ghost">Record</p>
+          <button
+            className={`btn bg-[white] shadow-none border-0 ${
+              dash == "Record" ? "text-slate-900" : "text-gray-500"
+            }`}
+            onClick={() => {
+              setDash("Record");
+            }}
+          >
+            Record
+          </button>
         </Link>
       </div>
       <div className="flex gap-6 items-center ">

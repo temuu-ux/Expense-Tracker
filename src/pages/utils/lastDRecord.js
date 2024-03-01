@@ -177,3 +177,17 @@ export const lastDrecord3 = [
     money: <div className="text-[#84CC16]">- 5000</div>,
   },
 ];
+
+export const category = [
+  { cateName: "Food & Drinks" },
+  { cateName: "Shopping" },
+  { cateName: "Housing" },
+  { cateName: "Transportation" },
+  { cateName: "Vehicle" },
+  { cateName: "Life & Entertainment" },
+  { cateName: "Communication, PC" },
+  { cateName: "Financial expenses" },
+  { cateName: "Investments" },
+  { cateName: "Income" },
+  { cateName: "Others" },
+];
