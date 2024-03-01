@@ -5,12 +5,12 @@ export default function RightRecord() {
   return (
     <div className="w-[894px] flex flex-col py-4  px-6 gap-6">
       <div className="flex justify-between w-[894px] pb-1">
-        <div className="flex items-center ">
-          <button>
+        <div className="flex items-center gap-3 justify-center ">
+          <button className="bg-[#E5E7EB] w-6 h-6 rounded-lg p-1 hover:bg-gray-400 && duration-500 && ease-in-out">
             <MdKeyboardArrowLeft />
           </button>
-          <p> Last 30 Days</p>
-          <button>
+          <p className="font-base not-italic font-normal"> Last 30 Days</p>
+          <button className="bg-[#E5E7EB] w-6 h-6 rounded-lg p-1 hover:bg-gray-400 && duration-500 && ease-in-out">
             <MdKeyboardArrowRight />
           </button>
         </div>

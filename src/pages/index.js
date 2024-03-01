@@ -1,17 +1,14 @@
-import Card from "../components/Card";
-import Income from "@/components/Income";
-import TotalExpenses from "@/components/TotalExpenses";
-import Dashboard from "@/components/Dashboard";
-import Layout from "@/components/layout";
+import LogIn from "@/components/LogIn";
 
-export default function Home() {
+import { useState } from "react";
+
+export default function Page() {
+  const [logIn, setLogIn] = useState("login");
   return (
-    <div className="m-auto bg-[#F3F4F6] ">
-      <Dashboard />
+    <div>
+      <div className={`${logIn == "login" ? "block" : "hidden"}`}>
+        <LogIn logIn={logIn} setLogIn={setLogIn} />
+      </div>
     </div>
   );
 }
-
-Home.getLayout = function getLayout(page) {
-  return <Layout>{page}</Layout>;
-};

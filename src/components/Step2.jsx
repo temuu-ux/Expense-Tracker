@@ -1,15 +1,15 @@
 export default function StepTwo({ setShowLoad }) {
   return (
     <div>
-      <div className="flex flex-col gap-36">
+      <div className="flex flex-col gap-36 w-screen h-screen">
         <div className="flex  flex-col pt-10 gap-12  items-center">
           <div className="flex gap-2 justify-center items-center ">
             <img src="/logo.svg" alt="" className="w-5 h-5 " />
             <img src="/Geld.svg" alt="" className="w-12 h-4" />
           </div>
           <ul className="steps w-[270px]">
-            <li className="step step-primary">Currency</li>
-            <li className="step step-primary">Balance</li>
+            <li className="step step-accent">Currency</li>
+            <li className="step step-accent">Balance</li>
             <li className="step">Finish</li>
           </ul>
         </div>

@@ -5,7 +5,7 @@ import React, { useState } from "react";
 export default function Modal() {
   const [color, setColor] = useState("blue");
   return (
-    <dialog id="my_modal_3" className="modal ">
+    <dialog id="my_modal_3" className="modal z-40">
       <div className="modal-box max-w-[792px] p-1 bg-[#FFFFFF]">
         <form method="dialog">
           <button className="btn pt-2 btn-ghost text-[#0F172A] w-6 h-6 absolute right-2 top-2">
@@ -48,8 +48,10 @@ export default function Modal() {
               </div>
 
               <div className="">
-                <p className="text-base not-italic font-normal p-1">Category</p>
-                <Option />
+                <p className="text-base not-italic font-normal p-1 ">
+                  Category
+                </p>
+                <Option className="" />
               </div>
               <div className="flex justify-between">
                 <div className="w-[168px]">

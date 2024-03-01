@@ -1,6 +1,6 @@
 import Layout from "@/components/layout";
 import Link from "next/link";
-
+import Router from "next/router";
 export default function LogIn({ setLogIn }) {
   return (
     <div className="w-screen h-screen flex">
@@ -34,6 +34,9 @@ export default function LogIn({ setLogIn }) {
               // onClick={() => {
               //   setLogIn("loading");
               // }}
+              onClick={() => {
+                Router.push("/dashboard");
+              }}
               className="btn bg-[#0166FF] w-[325px] text-[#FFFFFF] rounded-3xl"
             >
               Log in

@@ -13,19 +13,19 @@ export function Option() {
     //     return <option>{e.cateName}</option>;
     //   })}
     // </select>
-    <div className="dropdown w-full  text-[#94A3B8] text-base font-normal not-italic bg-[#F9FAFB]  ">
+    <div className="dropdown select  w-full   text-[#94A3B8] text-base font-normal not-italic bg-[#F9FAFB] ">
       <div
         tabIndex={0}
         role="button"
-        className="btn  w-full bg-[#F9FAFB] border-none text-center flex justify-start "
+        className="btn selected max-w-full w-full bg-[#F9FAFB] border-none text-center flex justify-start text-[#94A3B8] "
       >
         Choose
       </div>
       <ul
         tabIndex={0}
-        className="dropdown-content z-[1] menu p-2 shadow b rounded-box bg-[#FFFFFF] w-full  "
+        className="dropdown-content z-[5]  menu p-2 rounded-box bg-[#FFFFFF] max-w-full w-full  "
       >
-        <li className="overflow-auto">
+        <li className="overflow-auto ">
           {category.map((e) => {
             return (
               <a className="flex flex-col justify-center items-start">

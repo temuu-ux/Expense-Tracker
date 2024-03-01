@@ -2,8 +2,9 @@ import { BsPlusLg } from "react-icons/bs";
 import { HiMiniEye } from "react-icons/hi2";
 import { IoMdArrowDropright } from "react-icons/io";
 import { Type, Category } from "@/pages/utils/typeCateData";
+
 import Modal from "./Modal";
-import { Slider } from "./Slider";
+import {  RangeSlider } from "./Slider";
 export default function Record() {
   return (
     <div className=" w-[282px]  bg-[#FFFFFF] px-2 py-6 flex flex-col gap-8 items-start  rounded-xl">
@@ -36,8 +37,13 @@ export default function Record() {
         {Type.map((e) => (
           <div>
             <div className="text-center ">
-              <label className=" cursor-pointer flex gap-2 ">
-                <input type="checkbox" className="border-none rounded-lg" />
+              <label className=" cursor-pointer flex gap-2 items-center">
+                <input
+                  type="radio"
+                  name="theme-radios"
+                  className="radio theme-controller w-4 h-4"
+                  value="retro"
+                />
                 <p className="text-[#1F2937] text-base not-italic font-normal">
                   {e.typeName}
                 </p>
@@ -93,7 +99,7 @@ export default function Record() {
             />
           </div>
         </div>
-        <Slider className="w-[245px]" />
+        <RangeSlider />
       </div>
     </div>
   );
