@@ -1,15 +1,46 @@
 import { category } from "@/pages/utils/lastDRecord";
+import Modal from "./Modal";
+import React, { useState } from "react";
 
 export function Option() {
+  const [color, setColor] = useState("blue");
   return (
-    <select className="select select-bordered w-full  text-[#94A3B8] text-base font-normal not-italic bg-[#F9FAFB]">
-      <option disabled selected>
+    // <select className="select select-bordered w-full  text-[#94A3B8] text-base font-normal not-italic bg-[#F9FAFB]">
+    //   <option disabled selected className="">
+    //     Choose
+    //   </option>
+    //   {category.map((e) => {
+    //     return <option>{e.cateName}</option>;
+    //   })}
+    // </select>
+    <div className="dropdown w-full  text-[#94A3B8] text-base font-normal not-italic bg-[#F9FAFB]  ">
+      <div
+        tabIndex={0}
+        role="button"
+        className="btn  w-full bg-[#F9FAFB] border-none text-center flex justify-start "
+      >
         Choose
-      </option>
-      {category.map((e) => {
-        return <option>{e.cateName}</option>;
-      })}
-    </select>
+      </div>
+      <ul
+        tabIndex={0}
+        className="dropdown-content z-[1] menu p-2 shadow b rounded-box bg-[#FFFFFF] w-full  "
+      >
+        <li className="overflow-auto">
+          {category.map((e) => {
+            return (
+              <a className="flex flex-col justify-center items-start">
+                <div className="flex text-center gap-2 py-2 px-2 ">
+                  <p>{e.logo}</p>
+                  <p className="text-[#000000] py-0.5 text-base not-italic font-normal">
+                    {e.cateName}
+                  </p>
+                </div>
+              </a>
+            );
+          })}
+        </li>
+      </ul>
+    </div>
   );
 }
 

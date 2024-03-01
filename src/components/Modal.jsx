@@ -1,8 +1,9 @@
 import { Input } from "./Input";
 import { Option, Option2, Option3, Option4 } from "./Option";
-
+import React, { useState } from "react";
 
 export default function Modal() {
+  const [color, setColor] = useState("blue");
   return (
     <dialog id="my_modal_3" className="modal ">
       <div className="modal-box max-w-[792px] p-1 bg-[#FFFFFF]">
@@ -15,10 +16,28 @@ export default function Modal() {
         <div className="border-t border-[#E2E8F0] flex justify-center ">
           <div className="py-5 px-6 w-[396px] gap-4 flex flex-col">
             <div className="flex bg-[#F3F4F6] rounded-3xl">
-              <button className=" rounded-3xl bg-[#0166FF] text-[#F9FAFB] w-[172px] h-[40px]">
+              <button
+                className={` rounded-3xl  w-[172px] h-[40px] ${
+                  color == "blue"
+                    ? "bg-[#0166FF] text-[#F9FAFB] "
+                    : "bg-[#F3F4F6]  text-[#1F2937]"
+                }`}
+                onClick={() => {
+                  setColor("blue");
+                }}
+              >
                 Expense
               </button>
-              <button className=" bg-[#F3F4F6] text-[#1F2937] rounded-3xl w-[172px] h-[40px]">
+              <button
+                className={` rounded-3xl w-[172px] h-[40px] ${
+                  color == "green"
+                    ? "bg-[#16A34A] text-[#F9FAFB]"
+                    : "bg-[#F3F4F6] text-[#1F2937]"
+                }`}
+                onClick={() => {
+                  setColor("green");
+                }}
+              >
                 Income
               </button>
             </div>
@@ -42,7 +61,16 @@ export default function Modal() {
                   <Option3 />
                 </div>
               </div>
-              <button className="btn h-8 bg-[#0166FF] rounded-3xl text-[#FFFFFF] ">
+              <button
+                onClick={() => {
+                  setColor("blue");
+                }}
+                className={`btn h-8  rounded-3xl ${
+                  color == "blue"
+                    ? "bg-[#0166FF] text-[#FFFFFF] "
+                    : "bg-[#16A34A] text-[#F9FAFB]"
+                }`}
+              >
                 Add Record
               </button>
             </div>

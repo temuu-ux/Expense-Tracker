@@ -37,7 +37,7 @@ export default function Record() {
           <div>
             <div className="text-center ">
               <label className=" cursor-pointer flex gap-2 ">
-                <input type="checkbox" className="border-none" />
+                <input type="checkbox" className="border-none rounded-lg" />
                 <p className="text-[#1F2937] text-base not-italic font-normal">
                   {e.typeName}
                 </p>

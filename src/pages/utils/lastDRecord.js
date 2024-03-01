@@ -77,8 +77,8 @@ export const lastDrecord2 = [
   {
     input: <input type="checkbox" defaultChecked className="checkbox" />,
     homeLogo: (
-      <div className="bg-[#FF4545] w-10 h-10 rounded-full p-2 flex justify-center items-center">
-        <img src="/ForkKnife.svg" alt="" className="w-5 h-5" />
+      <div className="bg-[#FF4545] w-10 h-10 rounded-full p-2 flex justify-center items-center text-[#FFFFFF]">
+        <img src="/ForkKnife1.svg" alt="" className="w-5 h-5 text-[#FFFFFF]" />
       </div>
     ),
     categories: "Lending & Renting",
@@ -100,7 +100,7 @@ export const lastDrecord2 = [
     input: <input type="checkbox" defaultChecked className="checkbox" />,
     homeLogo: (
       <div className="bg-[#FF4545] w-10 h-10 rounded-full p-2 flex justify-center items-center">
-        <img src="/ForkKnife.svg" alt="" className="w-5 h-5" />
+        <img src="/ForkKnife1.svg" alt="" className="w-5 h-5" />
       </div>
     ),
     categories: "Food & Drinks",
@@ -114,7 +114,7 @@ export const lastDrecord3 = [
     input: <input type="checkbox" defaultChecked className="checkbox" />,
     homeLogo: (
       <div className="bg-[#FF4545] w-10 h-10 rounded-full p-2 flex justify-center items-center">
-        <img src="/ForkKnife.svg" alt="" className="w-5 h-5" />
+        <img src="/ForkKnife1.svg" alt="" className="w-5 h-5" />
       </div>
     ),
     categories: "Food & Drinks",
@@ -125,7 +125,7 @@ export const lastDrecord3 = [
     input: <input type="checkbox" defaultChecked className="checkbox" />,
     homeLogo: (
       <div className="bg-[#FF4545] w-10 h-10 rounded-full p-2 flex justify-center items-center">
-        <img src="/ForkKnife.svg" alt="" className="w-5 h-5" />
+        <img src="/ForkKnife1.svg" alt="" className="w-5 h-5" />
       </div>
     ),
     categories: "Food & Drinks",
@@ -136,7 +136,7 @@ export const lastDrecord3 = [
     input: <input type="checkbox" defaultChecked className="checkbox" />,
     homeLogo: (
       <div className="bg-[#FF4545] w-10 h-10 rounded-full p-2 flex justify-center items-center">
-        <img src="/ForkKnife.svg" alt="" className="w-5 h-5" />
+        <img src="/ForkKnife1.svg" alt="" className="w-5 h-5" />
       </div>
     ),
     categories: "Food & Drinks",
@@ -147,7 +147,7 @@ export const lastDrecord3 = [
     input: <input type="checkbox" defaultChecked className="checkbox" />,
     homeLogo: (
       <div className="bg-[#FF4545] w-10 h-10 rounded-full p-2 flex justify-center items-center">
-        <img src="/ForkKnife.svg" alt="" className="w-5 h-5" />
+        <img src="/ForkKnife1.svg" alt="" className="w-5 h-5" />
       </div>
     ),
     categories: "Food & Drinks",
@@ -158,7 +158,7 @@ export const lastDrecord3 = [
     input: <input type="checkbox" defaultChecked className="checkbox" />,
     homeLogo: (
       <div className="bg-[#FF4545] w-10 h-10 rounded-full p-2 flex justify-center items-center">
-        <img src="/ForkKnife.svg" alt="" className="w-5 h-5" />
+        <img src="/ForkKnife1.svg" alt="" className="w-5 h-5" />
       </div>
     ),
     categories: "Food & Drinks",
@@ -169,7 +169,7 @@ export const lastDrecord3 = [
     input: <input type="checkbox" defaultChecked className="checkbox" />,
     homeLogo: (
       <div className="bg-[#FF4545] w-10 h-10 rounded-full p-2 flex justify-center items-center">
-        <img src="/ForkKnife.svg" alt="" className="w-5 h-5" />
+        <img src="/ForkKnife1.svg" alt="" className="w-5 h-5" />
       </div>
     ),
     categories: "Food & Drinks",
@@ -179,15 +179,39 @@ export const lastDrecord3 = [
 ];
 
 export const category = [
-  { cateName: "Food & Drinks" },
-  { cateName: "Shopping" },
-  { cateName: "Housing" },
-  { cateName: "Transportation" },
-  { cateName: "Vehicle" },
-  { cateName: "Life & Entertainment" },
-  { cateName: "Communication, PC" },
-  { cateName: "Financial expenses" },
-  { cateName: "Investments" },
-  { cateName: "Income" },
-  { cateName: "Others" },
+  {
+    cateName: " Add Category",
+    logo: <img src="/plus.svg" alt="" />,
+  },
+  {
+    cateName: " Home",
+    logo: <img src="/House3.svg" alt="" />,
+  },
+  {
+    cateName: " Gift",
+    logo: <img src="/Gift.svg" alt="" />,
+  },
+  {
+    cateName: "Food",
+    logo: <img src="/ForkKnife.svg" alt="" />,
+  },
+  {
+    cateName: " Drinks",
+    logo: <img src="/Wine.svg" alt="" />,
+  },
+  {
+    cateName: " Taxi",
+    logo: <img src="/Taxi.svg" alt="" />,
+  },
+  {
+    cateName: " Shopping",
+    logo: <img src="/TShirt.svg" alt="" />,
+  },
+
+  // { cateName: "Home" },
+  // { cateName: "Gift" },
+  // { cateName: "Food " },
+  // { cateName: "Drinks" },
+  // { cateName: "Taxi" },
+  // { cateName: "Shopping" },
 ];
