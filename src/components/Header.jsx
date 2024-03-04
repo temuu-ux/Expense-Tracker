@@ -8,7 +8,7 @@ export default function Header() {
     <div className="w-[1440px] flex justify-between  m-auto  space-y-1 py-1  px-32">
       <div className="flex gap-6  items-center ">
         <img src="/logo.svg" alt="" />
-        <Link href={"/"}>
+        <Link href={"/Dashboard"}>
           <button
             className={` btn bg-[white] shadow-none border-0 ${
               dash == "Dashboard" ? "text-slate-900" : "text-gray-500"

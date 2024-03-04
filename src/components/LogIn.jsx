@@ -1,6 +1,7 @@
 import Layout from "@/components/layout";
 import Link from "next/link";
 import Router from "next/router";
+
 export default function LogIn({ setLogIn }) {
   return (
     <div className="w-screen h-screen flex">
