@@ -5,8 +5,8 @@ import React, { useState } from "react";
 export default function Modal() {
   const [color, setColor] = useState("blue");
   return (
-    <dialog id="my_modal_3" className="modal z-40">
-      <div className="modal-box max-w-[792px] p-1 bg-[#FFFFFF]">
+    <dialog id="my_modal_3" className="modal  backdrop-blur-sm ">
+      <div className="modal-box max-w-[792px] p-1 bg-[#FFFFFF] ">
         <form method="dialog">
           <button className="btn pt-2 btn-ghost text-[#0F172A] w-6 h-6 absolute right-2 top-2">
             ✕

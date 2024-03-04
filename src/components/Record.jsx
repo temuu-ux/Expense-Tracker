@@ -2,9 +2,9 @@ import { BsPlusLg } from "react-icons/bs";
 import { HiMiniEye } from "react-icons/hi2";
 import { IoMdArrowDropright } from "react-icons/io";
 import { Type, Category } from "@/pages/utils/typeCateData";
-
+import CateModal from "./CateModal";
 import Modal from "./Modal";
-import {  RangeSlider } from "./Slider";
+import { RangeSlider } from "./Slider";
 export default function Record() {
   return (
     <div className=" w-[282px]  bg-[#FFFFFF] px-2 py-6 flex flex-col gap-8 items-start  rounded-xl">
@@ -76,9 +76,7 @@ export default function Record() {
         })}
 
         <div>
-          <button className="flex items-center gap-2 text-[#1F2937] text-base not-italic font-normal">
-            <BsPlusLg className="text-[#0166FF] w-5 h-5" /> Add Category
-          </button>
+          <CateModal />
         </div>
       </div>
       <div className="flex flex-col gap-4">

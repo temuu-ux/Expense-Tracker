@@ -54,7 +54,7 @@ export default function SignUp({ setShowLoad }) {
             <p className="text-[#0F172A] text-base not-italic font-normal">
               Already have account?
             </p>
-            <Link href={"/logIn"}>
+            <Link href={"/"}>
               <p className="px-2 text-[#0166FF] text-base not-italic font-normal">
                 Log in
               </p>
