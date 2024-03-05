@@ -4,6 +4,11 @@ import React, { useState } from "react";
 
 export function Option() {
   const [color, setColor] = useState("blue");
+  const [valueD, setValueD] = useState("Home");
+  const handleGetValueD = (valueD) => {
+    setValueD(valueD);
+    console.log(valueD);
+  };
   return (
     // <select className="select select-bordered w-full  text-[#94A3B8] text-base font-normal not-italic bg-[#F9FAFB]">
     //   <option disabled selected className="">
@@ -23,12 +28,18 @@ export function Option() {
       </div>
       <ul
         tabIndex={0}
-        className="dropdown-content z-[5]  menu p-2 rounded-box bg-[#FFFFFF] max-w-full w-full  "
+        className="dropdown-content z-[1]  menu p-2 rounded-box bg-[#FFFFFF] max-w-full w-full shadow   overflow-scroll "
+        style={{ maxHeight: "200px" }}
       >
         <li className="overflow-auto ">
           {category.map((e) => {
             return (
-              <a className="flex flex-col justify-center items-start">
+              <a
+                className="flex flex-col justify-center items-start "
+                onClick={() => {
+                  handleGetValueD(`${e.cateName}`);
+                }}
+              >
                 <div className="flex text-center gap-2 py-2 px-2 ">
                   <p>{e.logo}</p>
                   <p className="text-[#000000] py-0.5 text-base not-italic font-normal">

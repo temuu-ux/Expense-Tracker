@@ -24,7 +24,7 @@ export default function CateModal() {
             <div className="flex gap-4 w-[494px] py-3">
               <div>
                 <select className="select select-bordered w-[84px] ">
-                  <option disabled selected>
+                  <option disabled selected className="">
                     ewc
                   </option>
                   <option>fg</option>
