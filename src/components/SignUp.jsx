@@ -27,16 +27,19 @@ export default function SignUp({ setShowLoad }) {
               <input
                 type="text"
                 placeholder="Email"
+                required
                 className="input input-bordered w-full max-w-xs text-black border-[#D1D5DB] bg-[#F3F4F6]"
               />
               <input
                 type="text"
                 placeholder="Password"
+                required
                 className="input input-bordered w-full max-w-xs  text-black border-[#D1D5DB] bg-[#F3F4F6]"
               />
               <input
                 type="text"
                 placeholder="Re-Password"
+                required
                 className="input input-bordered w-full max-w-xs  text-black border-[#D1D5DB] bg-[#F3F4F6]"
               />
             </div>
