@@ -25,13 +25,17 @@ export const data = {
   datasets: [
     {
       label: "Dataset 1",
-      data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-      backgroundColor: "rgba(255, 99, 132, 0.5)",
+      data: labels.map(() => faker.datatype.number({ min: 0, max: 3000000 })),
+      backgroundColor: "rgba(132, 204, 22, 1)",
+      borderRadius: 20,
+      barThickness: 15,
     },
     {
       label: "Dataset 2",
-      data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-      backgroundColor: "rgba(53, 162, 235, 0.5)",
+      data: labels.map(() => faker.datatype.number({ min: 0, max: 3000000 })),
+      backgroundColor: "rgba(249, 115, 22, 1)",
+      borderRadius: 20,
+      barThickness: 15,
     },
   ],
 };
@@ -44,7 +48,7 @@ export const BarChart = () => {
           Income-Expense
         </p>
       </div>
-      <div className="px-6 py-8 h-[229px]">
+      <div className="px py  h-[229px]">
         <Bar data={data} />
       </div>
     </div>

@@ -179,10 +179,10 @@ export const lastDrecord3 = [
 ];
 
 export const category = [
-  {
-    cateName: " Add Category",
-    logo: <img src="/plus.svg" alt="" />,
-  },
+  // {
+  //   cateName: " Add Category",
+  //   logo: <img src="/plus.svg" alt="" />,
+  // },
   {
     cateName: " Home",
     logo: <img src="/House3.svg" alt="" />,

@@ -83,20 +83,7 @@ export default function Record() {
         <h1 className="text-[#1F2937] text-base not-italic font-semibold">
           Amount Range
         </h1>
-        <div className="flex gap-4">
-          <div className="w-28 h-12 rounded-lg p-2 border-solid-1 border-[#D1D5DB] bg-[#F3F4F6] items-center inline-flex justify-center">
-            <input
-              type="text"
-              className="w-20 h-6 text-base text-[#1F2937] not-italic font-normal bg-[#F3F4F6]"
-            />
-          </div>
-          <div className="w-28 h-12 rounded-lg p-2 border-solid-1 border-[#D1D5DB] bg-[#F3F4F6] items-center inline-flex justify-center">
-            <input
-              type="text"
-              className="w-20 h-6 text-base text-[#1F2937] not-italic font-normal bg-[#F3F4F6]"
-            />
-          </div>
-        </div>
+
         <RangeSlider />
       </div>
     </div>

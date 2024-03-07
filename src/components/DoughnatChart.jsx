@@ -25,7 +25,7 @@ export const DoughnutChart = () => {
         <div>Jun 1 - Nov 30</div>
       </div>
       <div className="py-8 px-6 flex gap-12 w-[540px] ">
-        <div className="w-[155px] h-[155px] ">
+        <div className="w-[155px]   ">
           <Doughnut data={data} />
         </div>
         <div className="w-[337px] flex flex-col space-y-2">

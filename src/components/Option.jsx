@@ -9,8 +9,13 @@ export function Option() {
   const handleGetValueD = (valueD) => {
     setValueD(valueD);
     setDropdownVisible(false);
-    // console.log(valueD);
+    console.log(dropdownVisible);
   };
+  // function handleGetValueD (valueD) {
+  //   setValueD(valueD);
+  //   setDropdownVisible(false);
+  //   console.log(dropdownVisible);
+  // };
   return (
     // <select className="select select-bordered w-full  text-[#94A3B8] text-base font-normal not-italic bg-[#F9FAFB]">
     //   <option disabled selected className="">
@@ -31,11 +36,13 @@ export function Option() {
       </div>
       <ul
         tabIndex={0}
-        className="dropdown-content z-[1]  menu p-0 rounded-box bg-[#FFFFFF] max-w-full w-full shadow   "
+        className={`dropdown-content z-[1] menu p-0 rounded-box bg-[#FFFFFF] max-w-full w-full shadow-2xl  ${
+          dropdownVisible ? "block" : "hidden"
+        }`}
       >
         <li
           className="h-[450px] overflow-y-scroll "
-          style={{ maxHeight: "600px" }}
+          style={{ maxHeight: "180px" }}
         >
           {category.map((e) => {
             return (

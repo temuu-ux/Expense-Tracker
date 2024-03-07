@@ -22,14 +22,18 @@ export default function CateModal() {
 
           <div className="flex justify-center  border-t  border-[#E2E8F0] pt-3 px-6">
             <div className="flex gap-4 w-[494px] py-3">
-              <div>
-                <select className="select select-bordered w-[84px] ">
-                  <option disabled selected className="">
-                    ewc
-                  </option>
-                  <option>fg</option>
-                  <option>45</option>
-                </select>
+              <div className="dropdown">
+                <div tabIndex={0} role="button" className="btn ">
+                  Click
+                </div>
+                <ul
+                  tabIndex={0}
+                  className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+                >
+                  <li>
+                    <a>Item 1</a>
+                  </li>
+                </ul>
               </div>
               <div>
                 <select className="select select-bordered w-[350px] ">
