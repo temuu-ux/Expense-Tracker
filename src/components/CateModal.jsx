@@ -34,7 +34,7 @@ export default function CateModal() {
               <div>
                 <select className="select select-bordered w-[350px] ">
                   <option disabled selected>
-                    Who shot first?
+                    name
                   </option>
                   <option>Han Solo</option>
                   <option>Greedo</option>

@@ -6,7 +6,7 @@ export default function Modal() {
   const [color, setColor] = useState("blue");
   return (
     <dialog id="my_modal_3" className="modal  backdrop-blur-sm ">
-      <div className="modal-box max-w-[792px] p-1 bg-[#FFFFFF] ">
+      <div className="modal-box max-w-[792px] p-1 bg-[#FFFFFF] max-h-[580px] overflow-hidden ">
         <form method="dialog">
           <button className="btn pt-2 btn-ghost text-[#0F172A] w-6 h-6 absolute right-2 top-2">
             ✕
@@ -51,7 +51,7 @@ export default function Modal() {
                 <p className="text-base not-italic font-normal p-1 ">
                   Category
                 </p>
-                <Option className="" />
+                <Option />
               </div>
               <div className="flex justify-between">
                 <div className="w-[168px]">

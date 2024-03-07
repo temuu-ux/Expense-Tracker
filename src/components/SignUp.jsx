@@ -1,6 +1,15 @@
 import Link from "next/link";
 
 export default function SignUp({ setShowLoad }) {
+
+const SubmitHandler=async(e)=>{
+e.preventHandler()
+ 
+const data={
+  
+}
+}
+
   return (
     <div className="w-screen h-screen flex">
       <div className="w-1/2 bg-[#FFFFFF] flex justify-center items-center  pl-[422px] pr-[126px]">
@@ -18,29 +27,29 @@ export default function SignUp({ setShowLoad }) {
             </p>
           </div>
           <div className="flex flex-col justify-center gap-4 items-center">
-            <div className="flex flex-col justify-center gap-4 items-center w-[354px]">
+            <div className="flex flex-col justify-center gap-4 items-center w-[354px] [&_input]:bg-[#F3F4F6]">
               <input
                 type="text"
                 placeholder="Name"
-                className="input input-bordered w-full max-w-xs  text-black border-[#D1D5DB] bg-[#F3F4F6] "
+                className="input input-bordered w-full max-w-xs  text-black border-[#D1D5DB]  "
               />
               <input
                 type="text"
                 placeholder="Email"
                 required
-                className="input input-bordered w-full max-w-xs text-black border-[#D1D5DB] bg-[#F3F4F6]"
+                className="input input-bordered w-full max-w-xs text-black border-[#D1D5DB] "
               />
               <input
-                type="text"
+                type="password"
                 placeholder="Password"
                 required
-                className="input input-bordered w-full max-w-xs  text-black border-[#D1D5DB] bg-[#F3F4F6]"
+                className="input input-bordered w-full max-w-xs  text-black border-[#D1D5DB] "
               />
               <input
-                type="text"
+                type="password"
                 placeholder="Re-Password"
                 required
-                className="input input-bordered w-full max-w-xs  text-black border-[#D1D5DB] bg-[#F3F4F6]"
+                className="input input-bordered w-full max-w-xs  text-black border-[#D1D5DB] "
               />
             </div>
 

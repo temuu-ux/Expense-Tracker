@@ -3,11 +3,13 @@ import Modal from "./Modal";
 import React, { useState } from "react";
 
 export function Option() {
-  const [color, setColor] = useState("blue");
-  const [valueD, setValueD] = useState("Home");
+  const [valueD, setValueD] = useState("Choose");
+  const [display, setDisplay] = useState("display");
+  const [dropdownVisible, setDropdownVisible] = useState(false);
   const handleGetValueD = (valueD) => {
     setValueD(valueD);
-    console.log(valueD);
+    setDropdownVisible(false);
+    // console.log(valueD);
   };
   return (
     // <select className="select select-bordered w-full  text-[#94A3B8] text-base font-normal not-italic bg-[#F9FAFB]">
@@ -18,24 +20,27 @@ export function Option() {
     //     return <option>{e.cateName}</option>;
     //   })}
     // </select>
-    <div className="dropdown select  w-full   text-[#94A3B8] text-base font-normal not-italic bg-[#F9FAFB] ">
+    <div className="dropdown w-full   text-[#94A3B8] text-base font-normal not-italic bg-[#F9FAFB] overflow-auto-y">
       <div
         tabIndex={0}
         role="button"
         className="btn selected max-w-full w-full bg-[#F9FAFB] border-none text-center flex justify-start text-[#94A3B8] "
+        onClick={() => setDropdownVisible(!dropdownVisible)}
       >
-        Choose
+        <option className="text-[#000000]">{valueD}</option>
       </div>
       <ul
         tabIndex={0}
-        className="dropdown-content z-[1]  menu p-2 rounded-box bg-[#FFFFFF] max-w-full w-full shadow   overflow-scroll "
-        style={{ maxHeight: "200px" }}
+        className="dropdown-content z-[1]  menu p-0 rounded-box bg-[#FFFFFF] max-w-full w-full shadow   "
       >
-        <li className="overflow-auto ">
+        <li
+          className="h-[450px] overflow-y-scroll "
+          style={{ maxHeight: "600px" }}
+        >
           {category.map((e) => {
             return (
               <a
-                className="flex flex-col justify-center items-start "
+                className="flex flex-col justify-center items-start text-[#000000]"
                 onClick={() => {
                   handleGetValueD(`${e.cateName}`);
                 }}
