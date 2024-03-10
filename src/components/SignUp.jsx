@@ -1,14 +1,29 @@
 import Link from "next/link";
+import React, { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 export default function SignUp({ setShowLoad }) {
+  // const BE_URL
+  const [userName, setUserName] = useState("");
+  const [userEmail, setUserEmail] = useState("");
+  const [userPassword, setUserPassword] = useState("");
 
-const SubmitHandler=async(e)=>{
-e.preventHandler()
- 
-const data={
-  
-}
-}
+  const SubmitHandler = async () => {
+    e.preventHandler();
+
+    const data = {
+      name: userName,
+      email: userEmail,
+      password: userPassword,
+      id: uuidv4(),
+    };
+
+    const option = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+    };
+    body: JSON.stringify(data);
+  };
 
   return (
     <div className="w-screen h-screen flex">
@@ -31,19 +46,34 @@ const data={
               <input
                 type="text"
                 placeholder="Name"
-                className="input input-bordered w-full max-w-xs  text-black border-[#D1D5DB]  "
+                name="name"
+                id="name"
+                className="input input-bordered w-full max-w-xs  text-black border-[#D1D5DB]"
+                onChange={(e) => {
+                  setUserName(e.target.value);
+                }}
               />
               <input
                 type="text"
                 placeholder="Email"
+                name="email"
+                id="email"
                 required
-                className="input input-bordered w-full max-w-xs text-black border-[#D1D5DB] "
+                className="input input-bordered w-full max-w-xs text-black border-[#D1D5DB]"
+                onChange={(e) => {
+                  setUserEmail(e.target.value);
+                }}
               />
               <input
                 type="password"
                 placeholder="Password"
+                name="password"
+                id="password"
                 required
-                className="input input-bordered w-full max-w-xs  text-black border-[#D1D5DB] "
+                className="input input-bordered w-full max-w-xs  text-black border-[#D1D5DB]"
+                onChange={(e) => {
+                  setUserPassword(e.target.value);
+                }}
               />
               <input
                 type="password"
