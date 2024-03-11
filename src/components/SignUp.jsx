@@ -1,29 +1,72 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import Router from "next/router";
 
 export default function SignUp({ setShowLoad }) {
-  // const BE_URL
+  const BE_URL = "http://localhost:3004/add";
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const [userPassword, setUserPassword] = useState("");
 
-  const SubmitHandler = async () => {
-    e.preventHandler();
+  const [name, errorName] = useState(false);
+  const [email, errorEmail] = useState(false);
+  const [password, errorPassword] = useState(false);
+  const [rePassword, errorrePassword] = useState(false);
 
+  async function ErrorHandler(e) {
+    if (name == "" || email == "" || password == "" || rePassword == "") {
+      alert("error");
+    }
+
+    if (name == userName && email == userEmail && password === rePassword) {
+      SubmitHandler();
+      // setShowLoad("loading");
+    } else {
+      console.log();
+    }
+    if (name == "") {
+      errorName(true);
+    }
+    if (email == "") {
+      errorEmail(true);
+    }
+    if (password == "") {
+      errorPassword(true);
+    }
+    if (rePassword == "") {
+      errorrePassword(true);
+    }
+    if (password != rePassword) {
+      errorPassword(true);
+      errorrePassword(true);
+    }
+  }
+
+  async function SubmitHandler(e) {
+    if (name == "" || email == "" || password == "" || rePassword == "") {
+      alert("error");
+    }
+    // e.preventDefault();
     const data = {
       name: userName,
       email: userEmail,
       password: userPassword,
       id: uuidv4(),
     };
+    console.log(userName);
 
-    const option = {
+    const options = {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
     };
-    body: JSON.stringify(data);
-  };
+    const FETCHED_DATA = await fetch(BE_URL, options);
+    const FETCHED_JSON = await FETCHED_DATA.json();
+    console.log(data);
+  }
 
   return (
     <div className="w-screen h-screen flex">
@@ -48,6 +91,7 @@ export default function SignUp({ setShowLoad }) {
                 placeholder="Name"
                 name="name"
                 id="name"
+                error={name}
                 className="input input-bordered w-full max-w-xs  text-black border-[#D1D5DB]"
                 onChange={(e) => {
                   setUserName(e.target.value);
@@ -58,7 +102,9 @@ export default function SignUp({ setShowLoad }) {
                 placeholder="Email"
                 name="email"
                 id="email"
+                variant="outlined"
                 required
+                error={email}
                 className="input input-bordered w-full max-w-xs text-black border-[#D1D5DB]"
                 onChange={(e) => {
                   setUserEmail(e.target.value);
@@ -69,6 +115,8 @@ export default function SignUp({ setShowLoad }) {
                 placeholder="Password"
                 name="password"
                 id="password"
+                variant="outlined"
+                error={password}
                 required
                 className="input input-bordered w-full max-w-xs  text-black border-[#D1D5DB]"
                 onChange={(e) => {
@@ -78,6 +126,7 @@ export default function SignUp({ setShowLoad }) {
               <input
                 type="password"
                 placeholder="Re-Password"
+                error={rePassword}
                 required
                 className="input input-bordered w-full max-w-xs  text-black border-[#D1D5DB] "
               />
@@ -85,8 +134,11 @@ export default function SignUp({ setShowLoad }) {
 
             <button
               className="btn bg-[#0166FF] w-[325px] text-[#FFFFFF] rounded-3xl"
+              // onClick={() => {
+              //   setShowLoad("loading");
+              // }}
               onClick={() => {
-                setShowLoad("loading");
+                SubmitHandler();
               }}
             >
               Sign up
