@@ -69,7 +69,7 @@ export function Option() {
 
 export function Option2() {
   return (
-    <select className="select select-bordered  max-w-xs w-[168px] text-[#0F172A] text-base font-normal not-italic bg-[#F9FAFB]">
+    <select className="select select-bordered border-none  max-w-xs w-[168px] text-[#0F172A] text-base font-normal not-italic bg-[#F9FAFB]">
       <option disabled selected>
         Oct 30, 2023
       </option>
@@ -80,7 +80,7 @@ export function Option2() {
 }
 export function Option3() {
   return (
-    <select className="select select-bordered max-w-xs w-[168px] text-[#0F172A]] text-base font-normal not-italic bg-[#F9FAFB]">
+    <select className="select select-bordered max-w-xs border-none w-[168px] text-[#0F172A]] text-base font-normal not-italic bg-[#F9FAFB]">
       <option disabled selected>
         4:15 PM
       </option>
@@ -92,7 +92,7 @@ export function Option3() {
 
 export function Option4() {
   return (
-    <select className="select select-bordered max-w-xs w-full text-[#94A3B8] text-base font-normal not-italic bg-[#F9FAFB]">
+    <select className="select select-bordered max-w-xs border-none w-full text-[#94A3B8] text-base font-normal not-italic bg-[#F9FAFB]">
       <option disabled selected>
         Write here
       </option>

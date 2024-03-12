@@ -209,7 +209,7 @@ export const category = [
   },
 ];
 
-export const addCate = [
+const addCate = [
   {
     logo: (
       <svg
@@ -691,6 +691,7 @@ export const addCate = [
     ),
   },
 ];
+export default addCate;
 
 export const cate = [
   { color: <div className="rounded-full w-6 h-6 bg-[#0166FF]"></div> },

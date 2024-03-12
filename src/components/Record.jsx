@@ -23,11 +23,11 @@ export default function Record() {
           <Modal />
         </div>
       </div>
-      <div className="bg-gray-100 w-[250px] h-8 p-4 rounded-lg border border-gray-300 justify-start items-center inline-flex">
+      <div className="bg-gray-100 w-[250px] h-8  rounded-lg border border-gray-300 justify-start items-center inline-flex">
         <input
-          type="text"
+          type="search"
           placeholder="Search"
-          className="bg-gray-100 w-[300px] h-8 text-neutral-700 text-base font-normal "
+          className="bg-gray-100 w-[254px] h-8 border rounded-lg p-1 text-neutral-700 text-base font-normal "
         />
       </div>
       <div className="flex flex-col space-y-3">

@@ -3,7 +3,7 @@ export function Input() {
     <input
       type="text"
       placeholder="₮ 000.00"
-      className="input input-bordered input-lg border-none w-full  text-[#94A3B8] text-base font-normal not-italic bg-[#F3F4F6] h-[28px] "
+      className="input input-bordere input-lg border-none w-full rounded-lg text-[#94A3B8] text-base font-normal not-italic bg-[#F3F4F6] h-[28px] "
     />
   );
 }

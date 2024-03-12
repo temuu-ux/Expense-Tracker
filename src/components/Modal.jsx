@@ -42,7 +42,7 @@ export default function Modal() {
               </button>
             </div>
             <div className="flex flex-col gap-5 ">
-              <div className="bg-[#F3F4F6] rounded-2xl  flex flex-col justify-center h-[76px]">
+              <div className="bg-[#F3F4F6] rounded-2xl w-full px-2 flex flex-col justify-center h-[76px]">
                 <p className="text-base font-normal not-italic px-6 ">Amount</p>
                 <Input />
               </div>
@@ -86,7 +86,7 @@ export default function Modal() {
               <p>Note</p>
               <textarea
                 placeholder="Write here"
-                className="textarea textarea-bordered textarea-lg w-full min-h-[280px] max-w-xs"
+                className="textarea textarea-bordered border-none textarea-lg w-full min-h-[280px] max-w-xs"
               ></textarea>
             </div>
           </div>
