@@ -1,10 +1,11 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import { TextField } from "@mui/material";
 import Router from "next/router";
 
 export default function SignUp({ setShowLoad }) {
-  const BE_URL = "http://localhost:3004/add";
+  const BE_URL = "http://localhost:4000/add";
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const [userPassword, setUserPassword] = useState("");
@@ -14,47 +15,34 @@ export default function SignUp({ setShowLoad }) {
   const [password, errorPassword] = useState(false);
   const [rePassword, errorrePassword] = useState(false);
 
-  async function ErrorHandler(e) {
-    if (name == "" || email == "" || password == "" || rePassword == "") {
-      alert("error");
-    }
-
-    if (name == userName && email == userEmail && password === rePassword) {
-      SubmitHandler();
-      // setShowLoad("loading");
-    } else {
-      console.log();
-    }
-    if (name == "") {
-      errorName(true);
-    }
-    if (email == "") {
-      errorEmail(true);
-    }
-    if (password == "") {
-      errorPassword(true);
-    }
-    if (rePassword == "") {
-      errorrePassword(true);
-    }
-    if (password != rePassword) {
-      errorPassword(true);
-      errorrePassword(true);
+  async function errorHandler() {
+    //
+    // if (
+    //   name == userName &&
+    //   email == userEmail &&
+    //   password == userPassword &&
+    //   rePassword == userPassword
+    // ) {
+    //   SubmitHandler();
+    // }
+    if (name == "" || email == "" || password != rePassword) {
+      return (
+        errorName(true),
+        errorEmail(true),
+        errorPassword(true),
+        errorrePassword(true)
+      );
     }
   }
 
-  async function SubmitHandler(e) {
-    if (name == "" || email == "" || password == "" || rePassword == "") {
-      alert("error");
-    }
-    // e.preventDefault();
+  async function SubmitHandler() {
+    // e.preventDefault(); preventDefault from toi hereglen
     const data = {
       name: userName,
       email: userEmail,
       password: userPassword,
       id: uuidv4(),
     };
-    console.log(userName);
 
     const options = {
       method: "POST",
@@ -65,6 +53,7 @@ export default function SignUp({ setShowLoad }) {
     };
     const FETCHED_DATA = await fetch(BE_URL, options);
     const FETCHED_JSON = await FETCHED_DATA.json();
+    setShowLoad("loading");
     console.log(data);
   }
 
@@ -86,31 +75,32 @@ export default function SignUp({ setShowLoad }) {
           </div>
           <div className="flex flex-col justify-center gap-4 items-center">
             <div className="flex flex-col justify-center gap-4 items-center w-[354px] [&_input]:bg-[#F3F4F6]">
-              <input
-                type="text"
+              <TextField
+                type="name"
                 placeholder="Name"
                 name="name"
                 id="name"
                 error={name}
+                required
                 className="input input-bordered w-full max-w-xs  text-black border-[#D1D5DB]"
                 onChange={(e) => {
                   setUserName(e.target.value);
                 }}
               />
-              <input
-                type="text"
+              <TextField
+                type="email"
                 placeholder="Email"
                 name="email"
                 id="email"
-                variant="outlined"
+                // variant="outlined"
                 required
                 error={email}
-                className="input input-bordered w-full max-w-xs text-black border-[#D1D5DB]"
+                className="input input-bordered w-full max-w-xs h-12 text-black border-[#D1D5DB]"
                 onChange={(e) => {
                   setUserEmail(e.target.value);
                 }}
               />
-              <input
+              <TextField
                 type="password"
                 placeholder="Password"
                 name="password"
@@ -123,7 +113,7 @@ export default function SignUp({ setShowLoad }) {
                   setUserPassword(e.target.value);
                 }}
               />
-              <input
+              <TextField
                 type="password"
                 placeholder="Re-Password"
                 error={rePassword}
@@ -134,12 +124,7 @@ export default function SignUp({ setShowLoad }) {
 
             <button
               className="btn bg-[#0166FF] w-[325px] text-[#FFFFFF] rounded-3xl"
-              // onClick={() => {
-              //   setShowLoad("loading");
-              // }}
-              onClick={() => {
-                SubmitHandler();
-              }}
+              onClick={errorHandler}
             >
               Sign up
             </button>
