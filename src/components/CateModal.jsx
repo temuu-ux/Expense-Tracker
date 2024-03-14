@@ -3,7 +3,8 @@ import { cate } from "@/pages/utils/lastDRecord";
 import addCate from "@/pages/utils/lastDRecord";
 import React, { useState } from "react";
 
-export default function CateModal() {
+export default function CateModal(props) {
+  const { cateClose } = props;
   const [logo, setLogo] = useState(
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -18,8 +19,9 @@ export default function CateModal() {
       />
     </svg>
   );
-  const [visible, setVisible] = useState(false);
+
   const [cateVisible, setCateVisible] = useState(false);
+
   const handlerLogo = (logo) => {
     setLogo(
       <svg
@@ -32,12 +34,8 @@ export default function CateModal() {
         <path d={logo} fill="#343330" />
       </svg>
     );
-    setVisible(false);
   };
-  
-  const cateClose = () => {
-    setCateVisible(false);
-  };
+
   return (
     <div className="w-full inset-0 bg-black/30 h-[1250px] flex items-center justify-center z-10 absolute backdrop-blur-sm bg-opacity-50 transition-opacity duration-225 ease-out ">
       <div className="pb-32">
@@ -48,9 +46,7 @@ export default function CateModal() {
             </h3>
             <button
               className="btn btn-ghost text-[#0F172A] w-6 h-6 mt-1"
-              onClick={() => {
-                cateClose();
-              }}
+              onClick={() => cateClose()}
             >
               ✕
             </button>
