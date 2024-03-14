@@ -18,7 +18,7 @@ export default function RightRecord() {
       </div>
       <div className="flex  justify-between bg-[#FFFFFF] rounded-xl border-solid-1 border-[#E5E7EB] px-6 py-2 items-center w-[894px]">
         <label className=" cursor-pointer items-center flex space-x-2 ">
-          <input type="checkbox" defaultChecked className="checkbox" />
+          <input type="checkbox" Checked className="checkbox" />
           <span className="label-text">Select All</span>
         </label>
         <p className="text-[#94A3B8] ">- 35,500₮</p>

@@ -53,7 +53,7 @@ export const lastDrecord = [
 
 export const lastDrecord2 = [
   {
-    input: <input type="checkbox" defaultChecked className="checkbox" />,
+    input: <input type="checkbox" Checked className="checkbox" />,
     homeLogo: (
       <div className="bg-blue-600 w-10 h-10 rounded-full p-2 flex justify-center items-center">
         <img src="/Home1.svg" alt="" className="w-5 h-5" />
@@ -64,7 +64,7 @@ export const lastDrecord2 = [
     money: <div className="text-[#EAB308] ">- 1000</div>,
   },
   {
-    input: <input type="checkbox" defaultChecked className="checkbox" />,
+    input: <input type="checkbox" Checked className="checkbox" />,
     homeLogo: (
       <div className="bg-blue-600 w-10 h-10 rounded-full p-2 flex justify-center items-center">
         <img src="/Home1.svg" alt="" className="w-5 h-5" />
@@ -75,7 +75,7 @@ export const lastDrecord2 = [
     money: <div className="text-[#84CC16]">- 1000</div>,
   },
   {
-    input: <input type="checkbox" defaultChecked className="checkbox" />,
+    input: <input type="checkbox" Checked className="checkbox" />,
     homeLogo: (
       <div className="bg-[#FF4545] w-10 h-10 rounded-full p-2 flex justify-center items-center text-[#FFFFFF]">
         <img src="/ForkKnife1.svg" alt="" className="w-5 h-5 text-[#FFFFFF]" />
@@ -86,7 +86,7 @@ export const lastDrecord2 = [
     money: <div className="text-[#F54949]">- 2000</div>,
   },
   {
-    input: <input type="checkbox" defaultChecked className="checkbox" />,
+    input: <input type="checkbox" Checked className="checkbox" />,
     homeLogo: (
       <div className="bg-blue-600 w-10 h-10 rounded-full p-2 flex justify-center items-center">
         <img src="/Home1.svg" alt="" className="w-5 h-5" />
@@ -97,7 +97,7 @@ export const lastDrecord2 = [
     money: <div className="text-[#EAB308]">- 1000</div>,
   },
   {
-    input: <input type="checkbox" defaultChecked className="checkbox" />,
+    input: <input type="checkbox" Checked className="checkbox" />,
     homeLogo: (
       <div className="bg-[#FF4545] w-10 h-10 rounded-full p-2 flex justify-center items-center">
         <img src="/ForkKnife1.svg" alt="" className="w-5 h-5" />
@@ -111,7 +111,7 @@ export const lastDrecord2 = [
 
 export const lastDrecord3 = [
   {
-    input: <input type="checkbox" defaultChecked className="checkbox" />,
+    input: <input type="checkbox" Checked className="checkbox" />,
     homeLogo: (
       <div className="bg-[#FF4545] w-10 h-10 rounded-full p-2 flex justify-center items-center">
         <img src="/ForkKnife1.svg" alt="" className="w-5 h-5" />
@@ -122,7 +122,7 @@ export const lastDrecord3 = [
     money: <div className="text-[#EAB308]">- 1000</div>,
   },
   {
-    input: <input type="checkbox" defaultChecked className="checkbox" />,
+    input: <input type="checkbox" Checked className="checkbox" />,
     homeLogo: (
       <div className="bg-[#FF4545] w-10 h-10 rounded-full p-2 flex justify-center items-center">
         <img src="/ForkKnife1.svg" alt="" className="w-5 h-5" />
@@ -133,7 +133,7 @@ export const lastDrecord3 = [
     money: <div className="text-[#F54949]">- 2000</div>,
   },
   {
-    input: <input type="checkbox" defaultChecked className="checkbox" />,
+    input: <input type="checkbox" Checked className="checkbox" />,
     homeLogo: (
       <div className="bg-[#FF4545] w-10 h-10 rounded-full p-2 flex justify-center items-center">
         <img src="/ForkKnife1.svg" alt="" className="w-5 h-5" />
@@ -144,7 +144,7 @@ export const lastDrecord3 = [
     money: <div className="text-[#84CC16]">- 1000</div>,
   },
   {
-    input: <input type="checkbox" defaultChecked className="checkbox" />,
+    input: <input type="checkbox" Checked className="checkbox" />,
     homeLogo: (
       <div className="bg-[#FF4545] w-10 h-10 rounded-full p-2 flex justify-center items-center">
         <img src="/ForkKnife1.svg" alt="" className="w-5 h-5" />
@@ -155,7 +155,7 @@ export const lastDrecord3 = [
     money: <div className="text-[#EAB308]">- 3000</div>,
   },
   {
-    input: <input type="checkbox" defaultChecked className="checkbox" />,
+    input: <input type="checkbox" Checked className="checkbox" />,
     homeLogo: (
       <div className="bg-[#FF4545] w-10 h-10 rounded-full p-2 flex justify-center items-center">
         <img src="/ForkKnife1.svg" alt="" className="w-5 h-5" />
@@ -166,7 +166,7 @@ export const lastDrecord3 = [
     money: <div className="text-[#84CC16]">- 2000</div>,
   },
   {
-    input: <input type="checkbox" defaultChecked className="checkbox" />,
+    input: <input type="checkbox" Checked className="checkbox" />,
     homeLogo: (
       <div className="bg-[#FF4545] w-10 h-10 rounded-full p-2 flex justify-center items-center">
         <img src="/ForkKnife1.svg" alt="" className="w-5 h-5" />

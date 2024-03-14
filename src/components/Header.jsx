@@ -34,15 +34,12 @@ export default function Header() {
         </Link>
       </div>
       <div className="flex gap-6 items-center ">
-        <button
-          className="bt h-7  flex items-center justify-center gap-1 hover:bg-blue-900 ease-in-out duration-500 hover:scale-105 bg-[#0166FF] shadow-xl hover:shadow-2xl text-[#FFFFFF] rounded-3xl px-3 border-none"
-          onClick={() => document.getElementById("my_modal_3").showModal()}
-        >
+        <button className="bt h-7  flex items-center justify-center gap-1 hover:bg-blue-900 ease-in-out duration-500 hover:scale-105 bg-[#0166FF] shadow-xl hover:shadow-2xl text-[#FFFFFF] rounded-3xl px-3 border-none">
           <p className="text-sm not-italic font-normal flex text-center items-center gap-1">
             <BsPlusLg className="w-4 h-4" /> Record
           </p>
         </button>
-        <Modal />
+        {/* <Modal /> */}
         <img
           src="/Avatar.svg"
           alt=""

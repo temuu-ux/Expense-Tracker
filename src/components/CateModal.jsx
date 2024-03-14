@@ -38,7 +38,7 @@ export default function CateModal() {
     setVisible(false);
   };
   return (
-    <div className="relative">
+    <div className="relative ">
       <button
         className="flex items-center gap-2 text-[#1F2937] text-base not-italic font-normal "
         onClick={() => document.getElementById("my_modal_2").showModal()}
@@ -46,7 +46,7 @@ export default function CateModal() {
         <BsPlusLg className="text-[#0166FF] w-5 h-5 " /> Add Category
       </button>
       <dialog id="my_modal_2" className="modal  backdrop-blur-sm ">
-        <div className="modal-box max-w-[494px]  bg-[#FFFFFF] p-0 ">
+        <div className="modal-box max-w-[494px]  bg-[#FFFFFF] p-0 overflow-hidden overflow-y-0">
           <form method="dialog ">
             <button className="btn btn-ghost text-[#0F172A] w-6 h-6 absolute right-2 top-2 pt-2">
               ✕
@@ -70,33 +70,35 @@ export default function CateModal() {
                   {logo}
                 </div>
                 {visible && (
-                  <ul
-                    tabIndex={0}
-                    className="dropdown-content z-[1] menu rounded-box pl-0.5 "
-                  >
-                    <div className="flex flex-wrap w-[340px] bg-[#FFFFFF] shadow-2xl rounded-lg p-0 m-0 z-[-1] overflow-y-scroll ">
-                      {addCate.map((e) => {
-                        return (
-                          <div
-                            className=""
-                            onClick={() => {
-                              handlerLogo(e.logo.props.children.props.d);
-                            }}
-                          >
-                            <li className="flex p-0 ">
-                              <a className="p-4 ">{e.logo}</a>
-                            </li>
-                          </div>
-                        );
-                      })}
-                      <div className="border-t w-full  flex mx-5"></div>
-                      <div className="flex w-full  justify-around  px-2 py-5">
-                        {cate.map((e) => {
-                          return <div>{e.color}</div>;
+                  <div className="absolute ">
+                    <ul
+                      tabIndex={0}
+                      className="dropdown-content z-[1] menu rounded-box pl-0.5 "
+                    >
+                      <div className="flex flex-wrap w-[340px] bg-[#FFFFFF] shadow-2xl rounded-lg p-0 m-0 z-[-1] overflow-y-scroll ">
+                        {addCate.map((e) => {
+                          return (
+                            <div
+                              className=""
+                              onClick={() => {
+                                handlerLogo(e.logo.props.children.props.d);
+                              }}
+                            >
+                              <li className="flex p-0 ">
+                                <a className="p-4 ">{e.logo}</a>
+                              </li>
+                            </div>
+                          );
                         })}
+                        <div className="border-t w-full  flex mx-5"></div>
+                        <div className="flex w-full  justify-around  px-2 py-5">
+                          {cate.map((e) => {
+                            return <div>{e.color}</div>;
+                          })}
+                        </div>
                       </div>
-                    </div>
-                  </ul>
+                    </ul>
+                  </div>
                 )}
               </div>
               <div>
