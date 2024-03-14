@@ -1,6 +1,7 @@
 import { Input } from "./Input";
-import { Option, Option2, Option3, Option4 } from "./Option";
+import { Option, Option3, Option4 } from "./Option";
 import React, { useState } from "react";
+import { Daypicker, Timepicker } from "./Daypicker";
 
 export default function Modal() {
   const [color, setColor] = useState("blue");
@@ -56,11 +57,11 @@ export default function Modal() {
               <div className="flex justify-between">
                 <div className="w-[168px]">
                   <p className="text-base not-italic font-normal p-1">Date</p>
-                  <Option2 />
+                  <Daypicker />
                 </div>
                 <div className="w-[168px]">
-                  <p className="text-base not-italic font-normal p-1">Date</p>
-                  <Option3 />
+                  <p className="text-base not-italic font-normal p-1">Time</p>
+                  <Timepicker />
                 </div>
               </div>
               <button

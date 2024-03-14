@@ -2,6 +2,7 @@ import { BsPlusLg } from "react-icons/bs";
 import { cate } from "@/pages/utils/lastDRecord";
 import addCate from "@/pages/utils/lastDRecord";
 import React, { useState } from "react";
+
 export default function CateModal() {
   const [logo, setLogo] = useState(
     <svg
@@ -37,12 +38,12 @@ export default function CateModal() {
     setVisible(false);
   };
   return (
-    <div>
+    <div className="relative">
       <button
-        className="flex items-center gap-2 text-[#1F2937] text-base not-italic font-normal"
+        className="flex items-center gap-2 text-[#1F2937] text-base not-italic font-normal "
         onClick={() => document.getElementById("my_modal_2").showModal()}
       >
-        <BsPlusLg className="text-[#0166FF] w-5 h-5" /> Add Category
+        <BsPlusLg className="text-[#0166FF] w-5 h-5 " /> Add Category
       </button>
       <dialog id="my_modal_2" className="modal  backdrop-blur-sm ">
         <div className="modal-box max-w-[494px]  bg-[#FFFFFF] p-0 ">
@@ -55,9 +56,9 @@ export default function CateModal() {
             Add Category
           </h3>
 
-          <div className="flex justify-center  border-t  border-[#E2E8F0] pt-3 px-6">
-            <div className="flex gap-4 w-[494px] py-3">
-              <div className="dropdown">
+          <div className="flex justify-center  border-t  border-[#E2E8F0] pt-3 px-6 ">
+            <div className="flex gap-4 w-[494px] py-3 ">
+              <div className="dropdown ">
                 <div
                   tabIndex={0}
                   onClick={() => {
@@ -73,7 +74,7 @@ export default function CateModal() {
                     tabIndex={0}
                     className="dropdown-content z-[1] menu rounded-box pl-0.5 "
                   >
-                    <div className="flex flex-wrap w-[340px] bg-[#FFFFFF] shadow-2xl rounded-lg p-0 m-0 ">
+                    <div className="flex flex-wrap w-[340px] bg-[#FFFFFF] shadow-2xl rounded-lg p-0 m-0 z-[-1] overflow-y-scroll ">
                       {addCate.map((e) => {
                         return (
                           <div

@@ -4,18 +4,14 @@ import React, { useState } from "react";
 
 export function Option() {
   const [valueD, setValueD] = useState("Choose");
-  const [display, setDisplay] = useState("display");
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const handleGetValueD = (valueD) => {
     setValueD(valueD);
+    setImg(img);
     setDropdownVisible(false);
-    console.log(dropdownVisible);
+    console.log(img);
   };
-  // function handleGetValueD (valueD) {
-  //   setValueD(valueD);
-  //   setDropdownVisible(false);
-  //   console.log(dropdownVisible);
-  // };
+
   return (
     // <select className="select select-bordered w-full  text-[#94A3B8] text-base font-normal not-italic bg-[#F9FAFB]">
     //   <option disabled selected className="">
@@ -49,7 +45,7 @@ export function Option() {
               <a
                 className="flex flex-col justify-center items-start text-[#000000]"
                 onClick={() => {
-                  handleGetValueD(`${e.cateName}`);
+                  handleGetValueD(`${e.logo}  ${e.cateName}`);
                 }}
               >
                 <div className="flex text-center gap-2 py-2 px-2 ">
@@ -64,29 +60,6 @@ export function Option() {
         </li>
       </ul>
     </div>
-  );
-}
-
-export function Option2() {
-  return (
-    <select className="select select-bordered border-none  max-w-xs w-[168px] text-[#0F172A] text-base font-normal not-italic bg-[#F9FAFB]">
-      <option disabled selected>
-        Oct 30, 2023
-      </option>
-      <option>Oct 29, 2023</option>
-      <option>Oct 28, 2023</option>
-    </select>
-  );
-}
-export function Option3() {
-  return (
-    <select className="select select-bordered max-w-xs border-none w-[168px] text-[#0F172A]] text-base font-normal not-italic bg-[#F9FAFB]">
-      <option disabled selected>
-        4:15 PM
-      </option>
-      <option>3:32 PM</option>
-      <option>9:23 AM</option>
-    </select>
   );
 }
 
