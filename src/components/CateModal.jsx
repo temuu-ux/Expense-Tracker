@@ -19,10 +19,7 @@ export default function CateModal() {
     </svg>
   );
   const [visible, setVisible] = useState(false);
-  const [selectedColor, setSelectedColor] = useState("");
-  const handleColorSelect = (color) => {
-    setSelectedColor(color);
-  };
+  const [cateVisible, setCateVisible] = useState(false);
   const handlerLogo = (logo) => {
     setLogo(
       <svg
@@ -37,45 +34,41 @@ export default function CateModal() {
     );
     setVisible(false);
   };
+  
+  const cateClose = () => {
+    setCateVisible(false);
+  };
   return (
-    <div className="relative ">
-      <button
-        className="flex items-center gap-2 text-[#1F2937] text-base not-italic font-normal "
-        onClick={() => document.getElementById("my_modal_2").showModal()}
-      >
-        <BsPlusLg className="text-[#0166FF] w-5 h-5 " /> Add Category
-      </button>
-      <dialog id="my_modal_2" className="modal  backdrop-blur-sm ">
-        <div className="modal-box max-w-[494px]  bg-[#FFFFFF] p-0 overflow-hidden overflow-y-0">
-          <form method="dialog ">
-            <button className="btn btn-ghost text-[#0F172A] w-6 h-6 absolute right-2 top-2 pt-2">
+    <div className="w-full inset-0 bg-black/30 h-[1250px] flex items-center justify-center z-10 absolute backdrop-blur-sm bg-opacity-50 transition-opacity duration-225 ease-out ">
+      <div className="pb-32">
+        <div className=" max-w-[494px] w-full h-full bg-[#FFFFFF] rounded-xl border ">
+          <div className="flex justify-between">
+            <h3 className="font-semibold not-italic text-xl  p-4">
+              Add Category
+            </h3>
+            <button
+              className="btn btn-ghost text-[#0F172A] w-6 h-6 mt-1"
+              onClick={() => {
+                cateClose();
+              }}
+            >
               ✕
             </button>
-          </form>
-          <h3 className="font-semibold not-italic text-xl  p-4">
-            Add Category
-          </h3>
+          </div>
 
           <div className="flex justify-center  border-t  border-[#E2E8F0] pt-3 px-6 ">
             <div className="flex gap-4 w-[494px] py-3 ">
               <div className="dropdown ">
-                <div
-                  tabIndex={0}
-                  onClick={() => {
-                    setVisible(!visible);
-                  }}
-                  role="button"
-                  className="btn "
-                >
+                <div tabIndex={0} role="button" className="btn ">
                   {logo}
                 </div>
-                {visible && (
-                  <div className="absolute ">
+                {cateVisible && (
+                  <div className=" ">
                     <ul
                       tabIndex={0}
-                      className="dropdown-content z-[1] menu rounded-box pl-0.5 "
+                      className="dropdown-content  menu rounded-box pl-0.5 "
                     >
-                      <div className="flex flex-wrap w-[340px] bg-[#FFFFFF] shadow-2xl rounded-lg p-0 m-0 z-[-1] overflow-y-scroll ">
+                      <div className="flex flex-wrap w-[340px] bg-[#FFFFFF] shadow-2xl rounded-lg p-0 m-0  overflow-y-scroll ">
                         {addCate.map((e) => {
                           return (
                             <div
@@ -118,7 +111,7 @@ export default function CateModal() {
             </button>
           </div>
         </div>
-      </dialog>
+      </div>
     </div>
   );
 }

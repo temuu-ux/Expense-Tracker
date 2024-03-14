@@ -20,11 +20,11 @@ export function Option() {
     //     return <option>{e.cateName}</option>;
     //   })}
     // </select>
-    <div className="dropdown w-full z-[2]  text-[#94A3B8] text-base font-normal not-italic bg-[#F9FAFB] rounded-xl  text-center ">
+    <div className="dropdown w-[346px]  absolute  text-[#94A3B8] text-base font-normal not-italic bg-[#F3F4F6] rounded-xl  text-center ">
       <div
         tabIndex={0}
         role="button "
-        className="rounded-2xl h-12  items-center pl-4 selected max-w-full w-full bg-[#F9FAFB] border-none text-center flex justify-start  text-[#94A3B8] "
+        className="rounded-2xl h-12  items-center pl-4 selected max-w-full w-full bg-[#F3F4F6] border-none text-center flex justify-start  text-[#94A3B8] "
         onClick={() => setDropdownVisible(!dropdownVisible)}
       >
         <option className="text-[#000000]">{valueD}</option>
