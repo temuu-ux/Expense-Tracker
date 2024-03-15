@@ -1,4 +1,4 @@
-import { Input } from "./Input";
+import { Input, Input3 } from "./Input";
 import { Option, Option4 } from "./Option";
 import React, { useState } from "react";
 import { Daypicker, Timepicker } from "./Daypicker";
@@ -7,6 +7,8 @@ export default function Modal(props) {
   const { handleClose } = props;
   const [color, setColor] = useState("blue");
   const [visible, setVisible] = useState(false);
+
+  // const []
 
   return (
     <div className="w-full inset-0 bg-black/30 h-[1250px] flex items-center justify-center z-10 absolute backdrop-blur-sm bg-opacity-50 transition-opacity duration-225 ease-out pb-48">
@@ -52,7 +54,11 @@ export default function Modal(props) {
             <div className="flex flex-col gap-5 ">
               <div className="bg-[#F3F4F6] rounded-2xl w-full px-2 flex flex-col justify-center h-[76px]">
                 <p className="text-base font-normal not-italic px-6 ">Amount</p>
-                <Input />
+                <input
+                  type="text"
+                  placeholder="₮ 000.00"
+                  className="px-3 border-none    w-full rounded-lg  text-base font-normal not-italic bg-[#F3F4F6] h-[28px] "
+                />
               </div>
 
               <div className="">
@@ -90,13 +96,13 @@ export default function Modal(props) {
           <div className="pt- pb-6 px-6 w-[396px] flex flex-col gap-8">
             <div>
               <p className="text-base not-italic font-normal p-1">Payee</p>
-              <Option4 />
+              <Input3 />
             </div>
             <div>
               <p>Note</p>
               <textarea
                 placeholder="Write here"
-                className="textarea textarea-bordered border-none textarea-lg w-full min-h-[280px] max-w-xs"
+                className="bg-[#F3F4F6] w-[348px] rounded-lg textarea-lg  min-h-[280px] "
               ></textarea>
             </div>
           </div>

@@ -55,7 +55,14 @@ export default function CateModal(props) {
           <div className="flex justify-center  border-t  border-[#E2E8F0] pt-3 px-6 ">
             <div className="flex gap-4 w-[494px] py-3 ">
               <div className="dropdown ">
-                <div tabIndex={0} role="button" className="btn ">
+                <div
+                  tabIndex={0}
+                  role="button"
+                  className="btn "
+                  onClick={() => {
+                    setCateVisible(!cateVisible);
+                  }}
+                >
                   {logo}
                 </div>
                 {cateVisible && (
@@ -68,7 +75,6 @@ export default function CateModal(props) {
                         {addCate.map((e) => {
                           return (
                             <div
-                              className=""
                               onClick={() => {
                                 handlerLogo(e.logo.props.children.props.d);
                               }}

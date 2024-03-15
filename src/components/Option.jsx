@@ -1,14 +1,17 @@
 import { category } from "@/pages/utils/lastDRecord";
-import Modal from "./Modal";
+
 import React, { useState } from "react";
 
 export function Option() {
   const [valueD, setValueD] = useState("Choose");
+  const [logo, setLogo] = useState("");
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const handleGetValueD = (valueD) => {
     setValueD(valueD);
-
+    setLogo(logo);
     setDropdownVisible(false);
+    console.log(setLogo);
+    console.log(logo);
   };
 
   return (
@@ -43,11 +46,13 @@ export function Option() {
               <a
                 className="flex flex-col justify-center items-start text-[#000000] "
                 onClick={() => {
-                  handleGetValueD(` ${e.cateName}`);
+                  handleGetValueD(
+                    `${e.logo} ${e.cateName}`
+                  );
                 }}
               >
                 <div className="flex text-center gap-2 py-2 px-2 ">
-                  <p>{e.logo}</p>
+                  {e.logo}
                   <p className="text-[#000000] py-0.5 text-base not-italic font-normal">
                     {e.cateName}
                   </p>

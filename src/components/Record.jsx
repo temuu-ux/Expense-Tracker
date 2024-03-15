@@ -6,9 +6,6 @@ import CateModal from "./CateModal";
 import Modal from "./Modal";
 import { RangeSlider } from "./Slider";
 import React, { useState } from "react";
-import { Input } from "./Input";
-import { Option, Option4 } from "./Option";
-import { Daypicker, Timepicker } from "./Daypicker";
 
 export default function Record() {
   const [visible, setVisible] = useState(false);
